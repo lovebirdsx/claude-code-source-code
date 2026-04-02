@@ -865,7 +865,7 @@ export async function runHeadless(
     structuredIO,
     appState.mcp.clients,
     [...commands, ...appState.mcp.commands],
-    filteredTools,
+    filteredTools as Tools,
     initialMessages,
     canUseTool,
     sdkMcpConfigs,
@@ -2554,7 +2554,7 @@ function runHeadlessStreaming(
                 // Find the teammate ID by name
                 const teammateId = refreshedState.teamContext?.teammates
                   ? Object.entries(refreshedState.teamContext.teammates).find(
-                      ([, t]) => t.name === teammateToRemove,
+                      ([, t]) => (t as any).name === teammateToRemove,
                     )?.[0]
                   : undefined
 
@@ -4435,7 +4435,7 @@ async function handleInitializeRequest(
   if (request.hooks) {
     const hooks: Partial<Record<HookEvent, HookCallbackMatcher[]>> = {}
     for (const [event, matchers] of Object.entries(request.hooks)) {
-      hooks[event as HookEvent] = matchers.map(matcher => {
+      hooks[event as HookEvent] = (matchers as any).map(matcher => {
         const callbacks = matcher.hookCallbackIds.map(callbackId => {
           return structuredIO.createHookCallback(callbackId, matcher.timeout)
         })

@@ -16,12 +16,13 @@
     "outDir": "dist",
     "rootDir": "src",
     "baseUrl": ".",
+    "ignoreDeprecations": "6.0",
     "paths": {
       "bun:bundle": ["src/stubs/bun-bundle.ts"],
       "src/*": ["src/*"]
     },
     "types": ["node"],
-    "lib": ["ES2022", "DOM"],
+    "lib": ["ES2023", "DOM"],
     "allowImportingTsExtensions": false,
     "noEmit": false
   },

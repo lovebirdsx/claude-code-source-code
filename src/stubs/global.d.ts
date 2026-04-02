@@ -9,4 +9,6 @@ declare const MACRO: {
   VERSION_CHANGELOG: string
 }
 
-declare const Bun: {}
+declare const Bun: {
+  gc: () => void;
+}

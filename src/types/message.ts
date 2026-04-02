@@ -1,1 +1,12 @@
-export type Message = {}
+export type Message = any;
+export type AssistantMessage = any;
+export type AttachmentMessage = any;
+export type ProgressMessage<T = any> = any;
+export type SystemLocalCommandMessage = any;
+export type SystemMessage = any;
+export type UserMessage = any;
+export type RequestStartEvent = any;
+export type StreamEvent = any;
+export type ToolUseSummaryMessage = any;
+export type TombstoneMessage = any;
+export type NormalizedUserMessage = any;
