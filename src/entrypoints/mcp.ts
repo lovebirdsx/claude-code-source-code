@@ -47,7 +47,7 @@ export async function startMCPServer(
   const server = new Server(
     {
       name: 'claude/tengu',
-      version: MACRO.VERSION,
+      version: '2.1.88',
     },
     {
       capabilities: {
@@ -144,7 +144,7 @@ export async function startMCPServer(
         )
         if (validationResult && !validationResult.result) {
           throw new Error(
-            `Tool ${name} input is invalid: ${validationResult.message}`,
+            `Tool ${name} input is invalid: ${(validationResult as any).message}`,
           )
         }
         const finalResult = await tool.call(

@@ -17,7 +17,7 @@
     "rootDir": "src",
     "baseUrl": ".",
     "paths": {
-      "bun:bundle": ["stubs/bun-bundle.ts"],
+      "bun:bundle": ["src/stubs/bun-bundle.ts"],
       "src/*": ["src/*"]
     },
     "types": ["node"],
@@ -27,7 +27,7 @@
   },
   "include": [
     "src/**/*",
-    "stubs/**/*"
+    "src/stubs/**/*"
   ],
   "exclude": [
     "node_modules",
