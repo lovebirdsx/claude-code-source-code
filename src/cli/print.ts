@@ -1643,8 +1643,8 @@ function runHeadlessStreaming(
           id: connection.config.id,
         }
       } else if (
-        connection.config.type === 'stdio' ||
-        connection.config.type === undefined
+        connection.config.type === 'stdio' // ||
+        // connection.config.type === undefined
       ) {
         config = {
           type: 'stdio' as const,
