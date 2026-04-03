@@ -1,1 +1,1 @@
-export type DeepImmutable<T> = any;
+export type DeepImmutable<T> = T;

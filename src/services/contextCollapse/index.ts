@@ -13,3 +13,6 @@ export function isWithheldPromptTooLong(a: any, b: any, c: any): boolean {
 export function recoverFromOverflow(a: any, b: any): any {
     throw new Error('Not implemented');
 }
+export function initContextCollapse(): void {
+    throw new Error('Not implemented');
+}

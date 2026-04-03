@@ -996,7 +996,7 @@ export async function getAttachments(
   clearTimeout(timeoutId)
   // Defensive: a getter leaking [undefined] crashes .map(a => a.type) below.
   return [
-    ...userAttachmentResults.flat(),
+    ...userAttachmentResults.flat() as Attachment[],
     ...threadAttachmentResults.flat(),
     ...mainThreadAttachmentResults.flat(),
   ].filter(a => a !== undefined && a !== null)
@@ -3710,7 +3710,7 @@ async function getTeammateMailboxAttachments(
         // Find the teammate ID by name
         const teammateId = appState.teamContext?.teammates
           ? Object.entries(appState.teamContext.teammates).find(
-              ([, t]) => t.name === teammateToRemove,
+              ([, t]) => (t as any).name === teammateToRemove,
             )?.[0]
           : undefined
 

@@ -21,3 +21,6 @@ export type SDKCompactBoundaryMessage = any;
 export type SDKPermissionDenial = any;
 export type SDKUserMessageReplay = any;
 export type HookEvent = any;
+export type SyncHookJSONOutput = any;
+export type ModelUsage = any;
+

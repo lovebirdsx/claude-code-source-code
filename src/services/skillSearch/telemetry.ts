@@ -1,0 +1,1 @@
+export const SKILL_TELEMETRY_SOURCE = 'skill_search';

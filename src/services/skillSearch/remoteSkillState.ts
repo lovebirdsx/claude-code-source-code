@@ -1,0 +1,1 @@
+export const REMTE_SKILL_STATE_KEY = 'remote_skill_state';

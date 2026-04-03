@@ -1,4 +1,5 @@
 export type Message = any;
+export type MessageOrigin = any;
 export type AssistantMessage = any;
 export type AttachmentMessage = any;
 export type ProgressMessage<T = any> = any;

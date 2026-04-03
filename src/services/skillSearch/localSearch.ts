@@ -1,0 +1,1 @@
+export const clearSkillIndexCache = undefined as any;
